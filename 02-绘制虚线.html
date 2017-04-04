@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="cas" height="300" width="600"></canvas>
+    <script>
+        var cas = document.getElementById('cas'),
+            ctx = cas.getContext('2d');
+        ctx.moveTo(100,100);
+
+        var stap = 10,
+            pointX = 100 ;
+
+        while(true){
+            if (pointX >= 500){
+                break;
+            }
+            ctx.lineTo(pointX+=10,100);
+            ctx.moveTo(pointX+=10,100);
+        }
+
+        ctx.stroke();
+    </script>
+</body>
+</html>
